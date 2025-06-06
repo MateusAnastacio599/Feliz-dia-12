@@ -2,10 +2,7 @@ body {
   font-family: 'Delius', cursive;
   background: linear-gradient(to bottom, #5f84e3, #132041);
   color: #ffffff;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
   text-align: center;
   overflow: hidden;
