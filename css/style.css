@@ -12,23 +12,23 @@ body {
   padding: 20px;
 }
 
-h1 {
+.titulo {
+  font-size: 28px;
   margin-bottom: 10px;
 }
 
 .contador {
-  font-size: 18px;
+  font-size: 16px;
   margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .carousel {
   width: 100%;
-  max-width: 300px;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  margin-bottom: 30px;
+  margin-bottom: 14px;
   position: relative;
 }
 
@@ -53,3 +53,24 @@ h1 {
   border-radius: 25px;
   text-decoration: none;
 }
+
+.botaoGaleria{
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.seta-baixo {
+    text-align: center;
+    margin-top: 10px;
+    animation: bounce 2s infinite;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+
+  

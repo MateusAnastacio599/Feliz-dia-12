@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosso Livro de Aventuras</title>
+
+  <!-- Fonte estilo UP -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Patrick Hand', cursive;
+      background-color: #fff5ea;
+    }
+
+    header {
+      background: #ffcf6b;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      color: #7a4e0b;
+      margin: 0;
+    }
+
+    .categoria {
+      margin: 25px 20px;
+    }
+
+    .categoria h2 {
+      font-size: 1.5rem;
+      color: #d16ba5;
+      margin-bottom: 10px;
+      border-bottom: 2px dashed #f4a261;
+      padding-bottom: 5px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 12px;
+    }
+
+    .grid img, .grid video {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .grid img:hover, .grid video:hover {
+      transform: scale(1.05);
+    }
+
+    .voltar {
+      display: block;
+      text-align: center;
+      margin: 30px 0;
+      font-size: 1.2rem;
+      color: #7a4e0b;
+      text-decoration: none;
+    }
+
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 30px;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+      }
+      .categoria h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="titulo">
+  <span style="color: #e63946;">N</span>
+  <span style="color: #f1fa8c;">o</span>
+  <span style="color: #a8dadc;">s</span>
+  <span style="color: #457b9d;">s</span>
+  <span style="color: #ff6b6b;">o</span>
+  &nbsp;
+  <span style="color: #6a4c93;">L</span>
+  <span style="color: #ff9f1c;">i</span>
+  <span style="color: #2ec4b6;">v</span>
+  <span style="color: #e63946;">r</span>
+  <span style="color: #f1fa8c;">o</span>
+  &nbsp;
+  <span style="color: #a8dadc;">d</span>
+  <span style="color: #457b9d;">e</span>
+  &nbsp;
+  <span style="color: #ff6b6b;">A</span>
+  <span style="color: #6a4c93;">v</span>
+  <span style="color: #ff9f1c;">e</span>
+  <span style="color: #2ec4b6;">n</span>
+  <span style="color: #e63946;">t</span>
+  <span style="color: #f1fa8c;">u</span>
+  <span style="color: #a8dadc;">r</span>
+  <span style="color: #457b9d;">a</span>
+  <span style="color: #ff6b6b;">s</span>
+</h1>
+
+  </header>
+
+  <div class="categoria">
+    <h2>Viagens ✈️</h2>
+    <div class="grid">
+      <img src="img/viagem1.jpg" alt="Viagem 1" />
+      <img src="img/viagem2.jpg" alt="Viagem 2" />
+    </div>
+  </div>
+
+  <div class="categoria">
+    <h2>Vídeos Engraçados 😂</h2>
+    <div class="grid">
+      <video controls>
+        <source src="videos/fail1.mp4" type="video/mp4" />
+      </video>
+      <video controls>
+        <source src="videos/fail2.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+
+  <div class="categoria">
+    <h2>Fotos Antigas 🕰️</h2>
+    <div class="grid">
+      <img src="img/antiga1.jpg" alt="Antiga 1" />
+      <img src="img/antiga2.jpg" alt="Antiga 2" />
+    </div>
+  </div>
+
+  <a href="index.html" class="voltar">⬅️ Voltar para o carrossel</a>
+</body>
+</html>
