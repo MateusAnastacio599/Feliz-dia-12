@@ -40,7 +40,7 @@ function atualizarTempo() {
   if (minutos > 0) partes.push(`<strong>${minutos}</strong> ${minutos === 1 ? "minuto" : "minutos"}`);
   if (segundos >= 0) partes.push(`<strong>${segundos}</strong> ${segundos === 1 ? "segundo" : "segundos"}`);
 
-  document.getElementById("contador").innerHTML = 
+  document.getElementById("contador").innerHTML =
     `Me aguentando há ${partes.join(", ")} 💞`;
 }
 
@@ -68,10 +68,8 @@ function resetarAutoSlide() {
   iniciarAutoSlide();
 }
 
-// Iniciar carrossel automático ao carregar
 iniciarAutoSlide();
 
-// Swipe com transição
 let startX = 0;
 const carousel = document.getElementById("carousel");
 
@@ -85,13 +83,91 @@ carousel.addEventListener("touchend", e => {
 
   if (Math.abs(diff) > 50) {
     if (diff > 0) {
-      // swipe para a direita
       index = index === 0 ? totalImgs - 1 : index - 1;
     } else {
-      // swipe para a esquerda
       index = (index + 1) % totalImgs;
     }
     mostrarImagem(index);
     resetarAutoSlide();
   }
 });
+
+const livroDeAventuras = `
+  <a class="titulo2">
+    <span style="color: #e63946;">N</span>
+    <span style="color: #f1fa8c;">o</span>
+    <span style="color: #a8dadc;">s</span>
+    <span style="color: #457b9d;">s</span>
+    <span style="color: #ff6b6b;">o</span>
+    &nbsp;
+    <span style="color: #6a4c93;">L</span>
+    <span style="color: #ff9f1c;">i</span>
+    <span style="color: #2ec4b6;">v</span>
+    <span style="color: #e63946;">r</span>
+    <span style="color: #f1fa8c;">o</span>
+    &nbsp;
+    <span style="color: #a8dadc;">d</span>
+    <span style="color: #457b9d;">e</span>
+    &nbsp;
+    <span style="color: #ff6b6b;">A</span>
+    <span style="color: #6a4c93;">v</span>
+    <span style="color: #ff9f1c;">e</span>
+    <span style="color: #2ec4b6;">n</span>
+    <span style="color: #e63946;">t</span>
+    <span style="color: #f1fa8c;">u</span>
+    <span style="color: #a8dadc;">r</span>
+    <span style="color: #457b9d;">a</span>
+    <span style="color: #ff6b6b;">s</span>
+  </a>
+`;
+document.getElementById("meuTituloContainer").innerHTML = livroDeAventuras;
+
+
+// ==== NOVAS FUNÇÕES PARA ALTERNAR SEÇÕES ====
+
+function mostrarLivro() {
+  document.getElementById("principal").classList.remove("visible");
+  document.getElementById("principal").classList.add("hidden");
+
+  document.getElementById("musica").classList.remove("hidden");
+  document.getElementById("musica").classList.add("visible");
+}
+
+const seta = document.querySelector(".seta-baixo");
+
+// Clique
+seta.addEventListener("click", mostrarMusica);
+
+// Toque (mobile)
+let startY = null;
+seta.addEventListener("touchstart", (e) => {
+  startY = e.touches[0].clientY;
+});
+
+seta.addEventListener("touchend", (e) => {
+  const endY = e.changedTouches[0].clientY;
+  if (endY - startY < -30) {
+    mostrarMusica();
+  }
+});
+
+// Arraste com mouse (desktop)
+let startYMouse = null;
+seta.addEventListener("mousedown", (e) => {
+  startYMouse = e.clientY;
+});
+
+seta.addEventListener("mouseup", (e) => {
+  const endY = e.clientY;
+  if (endY - startYMouse > 30) {
+    mostrarMusica();
+  }
+});
+
+function voltarParaPrincipal() {
+  document.getElementById("musica").classList.remove("visible");
+  document.getElementById("musica").classList.add("hidden");
+
+  document.getElementById("principal").classList.remove("hidden");
+  document.getElementById("principal").classList.add("visible");
+}

@@ -9,14 +9,51 @@ body {
   height: 100vh;
   margin: 0;
   text-align: center;
+  overflow: hidden; /* Impede scroll entre seções */
+}
+
+/* Sessões principais */
+section {
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
 }
 
-.titulo {
-  font-size: 28px;
-  margin-bottom: 10px;
+/* Controle de visibilidade */
+.hidden {
+  transform: translateY(100vh);
+  opacity: 0;
+  pointer-events: none;
 }
 
+.visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Estilos existentes */
+.titulo {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  letter-spacing: 0px;  
+}
+
+.titulo2{
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-decoration: dashed;
+}
 .contador {
   font-size: 16px;
   margin-top: 20px;
@@ -24,20 +61,21 @@ body {
 }
 
 .carousel {
-  width: 100%;
+  width: 90%;
+  max-height: 450px;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  margin-bottom: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto 14px;
+  display: flex;
   position: relative;
 }
 
 #carouselTrack {
   display: flex;
-  transition: transform 0.8s ease; /* Transição suave */
+  transition: transform 0.8s ease;
   will-change: transform;
 }
-
 
 .carousel-track img {
   width: 100%;
@@ -54,23 +92,82 @@ body {
   text-decoration: none;
 }
 
-.botaoGaleria{
-  font-size: 20px;
-  color: #ffffff;
-  text-decoration: none;
+/* Setas de transição entre sessões */
+.seta-baixo, .seta-cima {
+  text-align: center;
+  margin-top: 10px;
+  animation: bounce 6s infinite;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
-.seta-baixo {
-    text-align: center;
-    margin-top: 10px;
-    animation: bounce 2s infinite;
-    font-size: 2rem;
-    cursor: pointer;
-  }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
 
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(8px); }
-  }
 
-  
+
+
+#hub-livro {
+  display: flex;
+  width: 90vw;
+  height: 600px;
+  margin: 40px auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  border-radius: 12px;
+  background: #f4e9d7; /* cor tipo papel antigo */
+  color: #5b4226;
+}
+
+.pagina {
+  box-sizing: border-box;
+  border-right: 2px solid #755d3a;
+  background: url('textura-papel.jpg') repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.pagina.direita {
+  border-right: none;
+  border-left: 2px solid #755d3a;
+  background-image: url('textura-papel-direita.jpg');
+  padding-right: 30px;
+}
+
+.pagina.esquerda{
+    padding: 30px 20px 20px 20px;
+    width: 100%;
+}
+
+.pagina h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 0 #cbbf9e;
+}
+
+.pagina ul {
+  margin-top: 40px;
+  list-style: none;
+  padding: 0;
+}
+
+.pagina ul li {
+  margin: 15px 0;
+  font-size: 1.4rem;
+}
+
+.pagina ul li a {
+  text-decoration: none;
+  color: #5b4226;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.pagina ul li a:hover {
+  color: #a97843;
+  cursor: pointer;
+}

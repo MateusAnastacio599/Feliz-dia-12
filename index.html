@@ -1,52 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pra você lembrar</title>
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Delius&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Delius&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mistral&display=swap" rel="stylesheet">
+  <!-- fonte extra opcional -->
 </head>
+
 <body>
-  <h1 class="titulo">Feliz dia dos Valentinos e dia 12 ❤️</h1>
 
-  <div class="contador" id="contador"></div>
+  <!-- Seção Principal -->
+  <section id="principal" class="visible">
+    <h1 class="titulo">Feliz dia dos Valentinos e dia 12 ❤️</h1>
 
-  <div class="carousel" id="carousel">
-    <div class="carousel-track" id="carouselTrack">    
-      <img src="img/foto1.jpg" class="active" />
-      <img src="img/foto2.webp" />
-      <img src="img/foto3.jpg" />
-      <img src="img/foto4.jpg"/>
-      <img src="img/foto5.jpg" />
-      <img src="img/foto6.jpg">
-      <img src="img/foto7.jpg">
-      <img src="img/foto8.jpg">
-      <img src="img/foto10.jpg">
+    <div class="contador" id="contador"></div>
+
+    <div class="carousel" id="carousel">
+      <div class="carousel-track" id="carouselTrack">
+        <img src="img/foto1.jpg" class="active" />
+        <img src="img/foto2.webp" />
+        <img src="img/foto3.jpg" />
+        <img src="img/foto4.jpg" />
+        <img src="img/foto5.jpg" />
+        <img src="img/foto6.jpg">
+        <img src="img/foto7.jpg">
+        <img src="img/foto8.jpg">
+        <img src="img/foto10.jpg">
+      </div>
     </div>
-  </div>
-  <a class="botaoGaleria" href="galeria.html">Uma galeria de mais de nós ❤️</a>
 
-  <div class="seta-baixo">⬇️</div>
-  
-  <section id="musica" style="padding: 30px; text-align: center; background: #000000;">
-  <h2 style="font-family: 'Dancing Script', cursive; font-size: 1.8rem;">🎶 Nossa Trilha Sonora</h2>
-  <p>Essa música me lembra muito a gente, dá o play e sente comigo 💖</p>
+    <div id="meuTituloContainer"></div>
 
-  <iframe width="300" height="170" src="https://www.youtube.com/embed/SEU_VIDEO_ID" 
-    title="YouTube video" frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen style="border-radius: 10px; margin-top: 10px;"></iframe>
+    <div class="seta-baixo" onclick="mostrarLivro()">
+      <svg fill="#ffffff" width="32px" height="32px" viewBox="-8.5 0 32 32" version="1.1"
+        xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0" style="display: block; margin: 0 auto;">
+        <title>angle-double-down</title>
+        <path
+          d="M7.28 22.44c-0.24 0-0.44-0.080-0.6-0.24l-6.44-6.44c-0.32-0.32-0.32-0.84 0-1.2 0.32-0.32 0.84-0.32 1.2 0l5.84 5.84 5.84-5.84c0.32-0.32 0.84-0.32 1.2 0 0.32 0.32 0.32 0.84 0 1.2l-6.44 6.44c-0.16 0.16-0.4 0.24-0.6 0.24zM7.28 17.68c-0.24 0-0.44-0.080-0.6-0.24l-6.44-6.44c-0.32-0.32-0.32-0.84 0-1.2 0.32-0.32 0.84-0.32 1.2 0l5.84 5.84 5.84-5.84c0.32-0.32 0.84-0.32 1.2 0 0.32 0.32 0.32 0.84 0 1.2l-6.44 6.44c-0.16 0.16-0.4 0.24-0.6 0.24z">
+        </path>
+      </svg>
+    </div>
 
-  <div style="margin-top: 20px;">
-    <a href="https://open.spotify.com/playlist/SUA_PLAYLIST" target="_blank"
-       style="display: inline-block; background-color: #1db954; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: bold;">
-      🌟 Ouvir nossa playlist no Spotify
-    </a>
-  </div>
-</section>
+  </section>
+
+  <!-- Seção do Livro de Aventuras (substituindo a seção música) -->
+  <section id="musica" class="hidden">
+    <div id="hub-livro">
+      <div class="pagina esquerda">
+        <a class="titulo">
+          <span style="color: #e63946;">N</span>
+          <span style="color: #f1fa8c;">o</span>
+          <span style="color: #a8dadc;">s</span>
+          <span style="color: #457b9d;">s</span>
+          <span style="color: #ff6b6b;">o</span>
+          &nbsp;
+          <span style="color: #6a4c93;">L</span>
+          <span style="color: #ff9f1c;">i</span>
+          <span style="color: #2ec4b6;">v</span>
+          <span style="color: #e63946;">r</span>
+          <span style="color: #f1fa8c;">o</span>
+          &nbsp;
+          <span style="color: #a8dadc;">d</span>
+          <span style="color: #457b9d;">e</span>
+          &nbsp;
+          <span style="color: #ff6b6b;">A</span>
+          <span style="color: #6a4c93;">v</span>
+          <span style="color: #ff9f1c;">e</span>
+          <span style="color: #2ec4b6;">n</span>
+          <span style="color: #e63946;">t</span>
+          <span style="color: #f1fa8c;">u</span>
+          <span style="color: #a8dadc;">r</span>
+          <span style="color: #457b9d;">a</span>
+          <span style="color: #ff6b6b;">s</span>
+        </a>
+        <ul>
+          <li><a href="#aventuras">🗺️ Aventuras</a></li>
+          <li><a href="#musicas">🎵 Músicas</a></li>
+          <li><a href="#inventario">📦 Inventário</a></li>
+          <li><a href="#personagens">👥 Personagens</a></li>
+        </ul>
+      </div>
+      <div class="pagina direita">
+        <!-- Pode colocar uma imagem, ou só deixar o fundo -->
+      </div>
+    </div>
+
+    <div class="seta-cima" onclick="voltarParaPrincipal()" style="cursor:pointer; margin-top: 20px;">
+      <!-- Coloque aqui seu SVG da seta -->
+      <svg fill="#ffffff" width="32px" height="32px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+        stroke="#ffffff" stroke-width="0.00032">
+        <path
+          d="M7.28 22.44c-0.24 0-0.44-0.08-0.6-0.24l-6.44-6.44c-0.32-0.32-0.32-0.84 0-1.2 0.32-0.32 0.84-0.32 1.2 0l5.84 5.84 5.84-5.84c0.32-0.32 0.84-0.32 1.2 0 0.32 0.32 0.32 0.84 0 1.2l-6.44 6.44c-0.16 0.16-0.4 0.24-0.6 0.24zM7.28 17.68c-0.24 0-0.44-0.08-0.6-0.24l-6.44-6.44c-0.32-0.32-0.32-0.84 0-1.2 0.32-0.32 0.84-0.32 1.2 0l5.84 5.84 5.84-5.84c0.32-0.32 0.84-0.32 1.2 0 0.32 0.32 0.32 0.84 0 1.2l-6.44 6.44c-0.16 0.16-0.4 0.24-0.6 0.24z" />
+      </svg>
+    </div>
+  </section>
+
 
 
   <script src="js/script.js"></script>
 </body>
+
 </html>
