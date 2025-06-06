@@ -1,0 +1,55 @@
+body {
+  font-family: 'Delius', cursive;
+  background: linear-gradient(to bottom, #5f84e3, #132041);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.contador {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.carousel {
+  width: 100%;
+  max-width: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin-bottom: 30px;
+  position: relative;
+}
+
+#carouselTrack {
+  display: flex;
+  transition: transform 0.8s ease; /* Transição suave */
+  will-change: transform;
+}
+
+
+.carousel-track img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.spotify {
+  font-size: 1.2rem;
+  background: #FE0032;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+}
