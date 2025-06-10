@@ -94,7 +94,7 @@ carousel.addEventListener("touchend", e => {
 
 const livroDeAventuras = `
   <a class="titulo2">
-    <span style="color: #e63946;">N</span>
+    <span style="color: #e63946; ">N</span>
     <span style="color: #f1fa8c;">o</span>
     <span style="color: #a8dadc;">s</span>
     <span style="color: #457b9d;">s</span>
@@ -121,53 +121,3 @@ const livroDeAventuras = `
   </a>
 `;
 document.getElementById("meuTituloContainer").innerHTML = livroDeAventuras;
-
-
-// ==== NOVAS FUNÇÕES PARA ALTERNAR SEÇÕES ====
-
-function mostrarLivro() {
-  document.getElementById("principal").classList.remove("visible");
-  document.getElementById("principal").classList.add("hidden");
-
-  document.getElementById("musica").classList.remove("hidden");
-  document.getElementById("musica").classList.add("visible");
-}
-
-const seta = document.querySelector(".seta-baixo");
-
-// Clique
-seta.addEventListener("click", mostrarMusica);
-
-// Toque (mobile)
-let startY = null;
-seta.addEventListener("touchstart", (e) => {
-  startY = e.touches[0].clientY;
-});
-
-seta.addEventListener("touchend", (e) => {
-  const endY = e.changedTouches[0].clientY;
-  if (endY - startY < -30) {
-    mostrarMusica();
-  }
-});
-
-// Arraste com mouse (desktop)
-let startYMouse = null;
-seta.addEventListener("mousedown", (e) => {
-  startYMouse = e.clientY;
-});
-
-seta.addEventListener("mouseup", (e) => {
-  const endY = e.clientY;
-  if (endY - startYMouse > 30) {
-    mostrarMusica();
-  }
-});
-
-function voltarParaPrincipal() {
-  document.getElementById("musica").classList.remove("visible");
-  document.getElementById("musica").classList.add("hidden");
-
-  document.getElementById("principal").classList.remove("hidden");
-  document.getElementById("principal").classList.add("visible");
-}

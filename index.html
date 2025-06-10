@@ -12,7 +12,7 @@
   <!-- fonte extra opcional -->
 </head>
 
-<body>
+<body class="index-pag">
 
   <!-- Seção Principal -->
   <section id="principal" class="visible">
@@ -34,9 +34,9 @@
       </div>
     </div>
 
-    <div 
-    id="meuTituloContainer">
-    </div>
+    <div id="meuTituloContainer"></div>
+
+
 
     <svg class="book-shelf" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 84 94"
       height="64" width="84">
@@ -66,7 +66,8 @@
       </g>
     </svg>
 
-    <div class="seta-baixo" onclick="mostrarLivro()">
+    </div>
+    <a href="livro.html" class="seta-baixo"> 
       <svg fill="#ffffff" width="32px" height="32px" viewBox="-8.5 0 32 32" version="1.1"
         xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0" style="display: block; margin: 0 auto;">
         <title>angle-double-down</title>
@@ -74,65 +75,9 @@
           d="M7.28 22.44c-0.24 0-0.44-0.080-0.6-0.24l-6.44-6.44c-0.32-0.32-0.32-0.84 0-1.2 0.32-0.32 0.84-0.32 1.2 0l5.84 5.84 5.84-5.84c0.32-0.32 0.84-0.32 1.2 0 0.32 0.32 0.32 0.84 0 1.2l-6.44 6.44c-0.16 0.16-0.4 0.24-0.6 0.24zM7.28 17.68c-0.24 0-0.44-0.080-0.6-0.24l-6.44-6.44c-0.32-0.32-0.32-0.84 0-1.2 0.32-0.32 0.84-0.32 1.2 0l5.84 5.84 5.84-5.84c0.32-0.32 0.84-0.32 1.2 0 0.32 0.32 0.32 0.84 0 1.2l-6.44 6.44c-0.16 0.16-0.4 0.24-0.6 0.24z">
         </path>
       </svg>
-    </div>
+    </a>
 
-  </section>
-
-  <!-- Seção do Livro de Aventuras (substituindo a seção música) -->
-  <section id="musica" class="hidden">
-    <div id="hub-livro">
-      <div class="pagina esquerda">
-        <a class="titulo">
-          <span style="color: #e63946;">N</span>
-          <span style="color: #f1fa8c;">o</span>
-          <span style="color: #a8dadc;">s</span>
-          <span style="color: #457b9d;">s</span>
-          <span style="color: #ff6b6b;">o</span>
-          &nbsp;
-          <span style="color: #6a4c93;">L</span>
-          <span style="color: #ff9f1c;">i</span>
-          <span style="color: #2ec4b6;">v</span>
-          <span style="color: #e63946;">r</span>
-          <span style="color: #f1fa8c;">o</span>
-          &nbsp;
-          <span style="color: #a8dadc;">d</span>
-          <span style="color: #457b9d;">e</span>
-          &nbsp;
-          <span style="color: #ff6b6b;">A</span>
-          <span style="color: #6a4c93;">v</span>
-          <span style="color: #ff9f1c;">e</span>
-          <span style="color: #2ec4b6;">n</span>
-          <span style="color: #e63946;">t</span>
-          <span style="color: #f1fa8c;">u</span>
-          <span style="color: #a8dadc;">r</span>
-          <span style="color: #457b9d;">a</span>
-          <span style="color: #ff6b6b;">s</span>
-        </a>
-        <ul>
-          <li><a href="#aventuras">🗺️ Aventuras</a></li>
-          <li><a href="#musicas">🎵 Músicas</a></li>
-          <li><a href="#inventario">📦 Inventário</a></li>
-          <li><a href="#personagens">👥 Personagens</a></li>
-        </ul>
-      </div>
-      <div class="pagina direita">
-        <!-- Pode colocar uma imagem, ou só deixar o fundo -->
-      </div>
-    </div>
-
-    <div class="seta-cima" onclick="voltarParaPrincipal()" style="cursor:pointer; margin-top: 20px;">
-      <!-- Coloque aqui seu SVG da seta -->
-      <svg fill="#ffffff" width="32px" height="32px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
-        stroke="#ffffff" stroke-width="0.00032">
-        <path
-          d="M7.28 22.44c-0.24 0-0.44-0.08-0.6-0.24l-6.44-6.44c-0.32-0.32-0.32-0.84 0-1.2 0.32-0.32 0.84-0.32 1.2 0l5.84 5.84 5.84-5.84c0.32-0.32 0.84-0.32 1.2 0 0.32 0.32 0.32 0.84 0 1.2l-6.44 6.44c-0.16 0.16-0.4 0.24-0.6 0.24zM7.28 17.68c-0.24 0-0.44-0.08-0.6-0.24l-6.44-6.44c-0.32-0.32-0.32-0.84 0-1.2 0.32-0.32 0.84-0.32 1.2 0l5.84 5.84 5.84-5.84c0.32-0.32 0.84-0.32 1.2 0 0.32 0.32 0.32 0.84 0 1.2l-6.44 6.44c-0.16 0.16-0.4 0.24-0.6 0.24z" />
-      </svg>
-    </div>
-  </section>
-
-
-
-  <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
