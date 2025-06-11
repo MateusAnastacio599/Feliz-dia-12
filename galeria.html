@@ -1,146 +1,168 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nosso Livro de Aventuras</title>
-
-  <!-- Fonte estilo UP -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Patrick Hand', cursive;
-      background-color: #fff5ea;
-    }
-
-    header {
-      background: #ffcf6b;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-
-    header h1 {
-      font-size: 2.2rem;
-      color: #7a4e0b;
-      margin: 0;
-    }
-
-    .categoria {
-      margin: 25px 20px;
-    }
-
-    .categoria h2 {
-      font-size: 1.5rem;
-      color: #d16ba5;
-      margin-bottom: 10px;
-      border-bottom: 2px dashed #f4a261;
-      padding-bottom: 5px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 12px;
-    }
-
-    .grid img, .grid video {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .grid img:hover, .grid video:hover {
-      transform: scale(1.05);
-    }
-
-    .voltar {
-      display: block;
-      text-align: center;
-      margin: 30px 0;
-      font-size: 1.2rem;
-      color: #7a4e0b;
-      text-decoration: none;
-    }
-
-    @media (max-width: 500px) {
-      header h1 {
-        font-size: 30px;
-        text-align: center;
-        align-items: center;
-        align-content: center;
-      }
-      .categoria h2 {
-        font-size: 1.2rem;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nossa Galeria 💖</title>
+  <link rel="stylesheet" href="css/galeria.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <header>
-    <h1 class="titulo">
-  <span style="color: #e63946;">N</span>
-  <span style="color: #f1fa8c;">o</span>
-  <span style="color: #a8dadc;">s</span>
-  <span style="color: #457b9d;">s</span>
-  <span style="color: #ff6b6b;">o</span>
-  &nbsp;
-  <span style="color: #6a4c93;">L</span>
-  <span style="color: #ff9f1c;">i</span>
-  <span style="color: #2ec4b6;">v</span>
-  <span style="color: #e63946;">r</span>
-  <span style="color: #f1fa8c;">o</span>
-  &nbsp;
-  <span style="color: #a8dadc;">d</span>
-  <span style="color: #457b9d;">e</span>
-  &nbsp;
-  <span style="color: #ff6b6b;">A</span>
-  <span style="color: #6a4c93;">v</span>
-  <span style="color: #ff9f1c;">e</span>
-  <span style="color: #2ec4b6;">n</span>
-  <span style="color: #e63946;">t</span>
-  <span style="color: #f1fa8c;">u</span>
-  <span style="color: #a8dadc;">r</span>
-  <span style="color: #457b9d;">a</span>
-  <span style="color: #ff6b6b;">s</span>
-</h1>
-
-  </header>
-
-  <div class="categoria">
-    <h2>Viagens ✈️</h2>
-    <div class="grid">
-      <img src="img/viagem1.jpg" alt="Viagem 1" />
-      <img src="img/viagem2.jpg" alt="Viagem 2" />
-    </div>
+  <div class="top-bar">
+    <a href="index.html" class="back-btn">
+      <img src="img/icones/angle-left-svgrepo-com.svg" alt="Voltar">
+    </a>
+    <span class="title">Nossa Galeria 📸</span>
+    <a href="livro.html" class="next-btn">
+      <img src="img/icones/angle-right-svgrepo-com.svg" alt="Agenda">
+    </a>
   </div>
 
-  <div class="categoria">
-    <h2>Vídeos Engraçados 😂</h2>
-    <div class="grid">
-      <video controls>
-        <source src="videos/fail1.mp4" type="video/mp4" />
+  <main class="gallery">
+
+    <!-- Exemplo de card com foto -->
+    <div class="gallery-item">
+      <img src="/Feliz-dia-12/img/Galeria/primeira foto.jpg" alt="Foto nossa">
+      <div class="caption">
+        <p>Nossa primeira foto 📷</p>
+        <span class="date">07/11/2020</span>
+      </div>
+    </div>
+
+    <!-- Exemplo de card com vídeo -->
+    <div class="gallery-item">
+      <video controls muted>
+        <source src="img/Galeria/video-lambida.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos.
       </video>
-      <video controls>
-        <source src="videos/fail2.mp4" type="video/mp4" />
+      <div class="caption">
+        <p>Momento que era pra ser fofo e tu lambeu minha cara 😡</p>
+        <span class="date">7/11/2020</span>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="/Feliz-dia-12/img/Galeria/aliança.jpg" alt="Foto nossa">
+      <div class="caption">
+        <p>Nossa aliança do Van Gogh 🌻</p>
+        <span class="date">27/11/2020</span>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="/Feliz-dia-12/img/Galeria/doguinho.jpg" alt="Foto nossa">
+      <div class="caption">
+        <p>Dia em que você foi brutalmente atacada pelo Fabio Assunção 🐕</p>
+        <span class="date">21/04/2021</span>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="/Feliz-dia-12/img/Galeria/zxozoe.jpg" alt="Foto nossa">
+      <div class="caption">
+        <p>Quando uma nova integrante chegou em casa ❤️</p>
+        <span class="date">27/11/2021</span>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="/Feliz-dia-12/img/Galeria/zozoe2.jpg" alt="Foto nossa">
+      <div class="caption">
+        <p>Mais uma da zozoe por que ela adorou sua cobertinha 🐈‍⬛</p>
+        <span class="date">13/12/2021</span>
+      </div>
+    </div>
+
+    <!-- Exemplo de card com vídeo -->
+    <div class="gallery-item">
+      <video controls muted>
+        <source src="img/Galeria/video2.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos.
       </video>
+      <div class="caption">
+        <p>Nossa segunda virada juntos 🎆</p>
+        <span class="date">31/12/2021</span>
+      </div>
     </div>
-  </div>
 
-  <div class="categoria">
-    <h2>Fotos Antigas 🕰️</h2>
-    <div class="grid">
-      <img src="img/antiga1.jpg" alt="Antiga 1" />
-      <img src="img/antiga2.jpg" alt="Antiga 2" />
+    <div class="gallery-item">
+      <img src="/Feliz-dia-12/img/Galeria/hamburg.jpg" alt="Foto nossa">
+      <div class="caption">
+        <p>Nosso hamburgão mais bão de todos 🍔</p>
+        <span class="date">20/01/2022</span>
+      </div>
     </div>
-  </div>
 
-  <a href="index.html" class="voltar">⬅️ Voltar para o carrossel</a>
+    <div class="gallery-item">
+      <img src="/Feliz-dia-12/img/Galeria/piquinique.jpg" alt="Foto nossa">
+      <div class="caption">
+        <p>Nosso pequinique</p>
+        <span class="date">20/01/2022</span>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="/Feliz-dia-12/img/Galeria/floripa.jpg" alt="Foto nossa">
+      <div class="caption">
+        <p>Nossa primeira viagem 🏖️</p>
+        <span class="date">09/01/2023</span>
+      </div>
+    </div>
+
+    <!-- Exemplo de card com vídeo -->
+    <div class="gallery-item">
+      <video controls muted>
+        <source src="img/Galeria/homem de ferro.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos.
+      </video>
+      <div class="caption">
+        <p>Homem de ferro vendendo picolé 🤯</p>
+        <span class="date">11/01/2023</span>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="/Feliz-dia-12/img/Galeria/casamento.jpg" alt="Foto nossa">
+      <div class="caption">
+        <p>Lugar que eu te pedi em casamento 😁</p>
+        <span class="date">12/01/2023</span>
+      </div>
+    </div>
+
+    <!-- Exemplo de card com vídeo -->
+    <div class="gallery-item">
+      <video controls muted>
+        <source src="img/Galeria/sapo.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos.
+      </video>
+      <div class="caption">
+        <p>HAHAHA AHAA 🐸</p>
+        <span class="date">11/10/2024</span>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="/Feliz-dia-12/img/Galeria/Screenshot_2024-10-11-20-00-11-792_com.android.camera.jpg" alt="Foto nossa">
+      <div class="caption">
+        <p>Dia que São Paulo teve um furacão por 2 minutos </p>
+        <span class="date">11/10/2024</span>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="/Feliz-dia-12/img/Galeria/triz.jpg" alt="Foto nossa">
+      <div class="caption">
+        <p>Quando não fomos no MASP, mas conhecemos a Triz ❤️</p>
+        <span class="date">13/10/2024</span>
+      </div>
+    </div>
+
+
+  </main>
+
 </body>
+
 </html>

@@ -10,6 +10,22 @@ body {
   overflow: hidden;
 }
 
+.back{
+  position: fixed;
+  top: 50px;
+  z-index: 9999;
+  padding: 30px 150px 30px 150px;
+  background-color: #ff6b81;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 48px;
+  font-family: 'Delius';
+  text-decoration: none;
+}
 
 .paper {
   background-image: url("https://i0.wp.com/textures.world/wp-content/uploads/2018/10/2-Millimeter-Paper-Background-copy.jpg?ssl=1");

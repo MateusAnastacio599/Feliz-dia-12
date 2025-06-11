@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fdf6f0;
+  color: #333;
+}
+
+.top-bar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 107, 129, 0.95);
+  padding: 10px 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.top-bar img {
+  width: 42px;
+  height: 42px;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.gallery {
+  column-count: 2;
+  column-gap: 6px;
+  padding: 6px;
+  row-gap: 6px;
+}
+
+.gallery-item {
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-bottom: 6px;
+  overflow: hidden;
+  break-inside: avoid; /* ESSENCIAL para masonry funcionar */
+  transition: transform 0.3s;
+}
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: auto;
+  max-height: 300px; /* LIMITANDO altura máxima da mídia */
+  object-fit: cover;
+  display: block;
+}
+
+.caption {
+  padding: 8px 10px;
+}
+
+.caption p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.date {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: #999;
+}
+
+.note {
+  background-image: url('/Feliz-dia-12/img/old-paper-texture-background_118047-1521.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: color #fff;
+}
+
+.note-content {
+  padding: 20px;
+  font-size: 15px;
+  text-align: center;
+  color: #c03737;
+}
+
