@@ -21,6 +21,12 @@
     "titulo": "Calendário",
     "artista": "ANAVITÓRIA",
     "capa": "https://upload.wikimedia.org/wikipedia/pt/3/32/Capa_de_O_Tempo_%C3%89_Agora.jpg",
+    "arquivo": "audio/Calendário.mp3"
+  },
+  {
+    "titulo": "Pra Você Dar o Nome",
+    "artista": "5 a Seco",
+    "capa": "https://cdn-images.dzcdn.net/images/artist/3d057645dc775cd8a9ac6e6ef10ec707/1900x1900-000000-80-0-0.jpg",
     "arquivo": "audio/Pra Você Dar o Nome (Ao Vivo).mp3"
   }
 ]

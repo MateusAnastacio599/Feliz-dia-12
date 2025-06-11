@@ -17,14 +17,14 @@ body {
 
 /* Estilos existentes */
 .titulo {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   line-height: 1.2;
   letter-spacing: 0px;  
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 12px;
+  padding-left: 48px;
+  padding-right: 48px;
 }
 
 .titulo2{
@@ -67,7 +67,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   margin: 0 auto 14px;
-  margin-top: 30px;
+  margin-top: 24px;
   display: flex;
 }
 
@@ -146,11 +146,14 @@ body {
 }
 
 .music-cover {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 10px;
   object-fit: cover;
   margin-right: 15px;
+  border: solid 1px;
+  border-color: #dadada;
+  border-radius: 12px;
 }
 
 .music-info {
@@ -161,14 +164,14 @@ body {
 
 .music-title {
   margin: 0;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   color: #333;
 }
 
 .music-artist {
   margin: 5px 0 0 0;
-  font-size: 14px;
+  font-size: 12px;
   color: #777;
 }
 
