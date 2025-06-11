@@ -15,9 +15,6 @@ body {
   min-height: 100vh;
 }
 
-/* Sessões principais */
-
-
 /* Estilos existentes */
 .titulo {
   font-size: 28px;
@@ -42,15 +39,35 @@ body {
   padding-right: 20px;
 }
 
+.carrussel-container{
+  position: relative;
+}
 
+.gallery-icon-link img{
+  position: absolute;
+  object-fit: contain;
+  top: 20px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  z-index: 10;
+  opacity: 0.8;
+  transition: 0.3s ease;
+}
+
+.gallery-icon-link:hover {
+  opacity: 1;
+}
 
 .carousel {
+  position: relative;
   width: 90%;
   max-height: 450px;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   margin: 0 auto 14px;
+  margin-top: 30px;
   display: flex;
 }
 
@@ -90,4 +107,120 @@ body {
   opacity: 0;
   animation: slideDownFade 0.8s ease-out forwards;
   animation-delay: 0.3s;
+}
+
+.music-caption {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.music-captiontxt img{
+  width: 40px;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.line-edit{
+  border-radius: 100%;
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.music-player {
+  bottom: 30px;
+  background: #fff;
+  padding: 10px 14px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  z-index: 999;
+  backdrop-filter: blur(5px);
+}
+
+.music-cover {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.music-info {
+  flex: 1;
+  align-items: left;
+  text-align: left;
+}
+
+.music-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.music-artist {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  color: #777;
+}
+
+.play-pause {
+  background-color: #c03737;
+  display: flex;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-items: center;
+}
+
+.play-pause img {
+  width: 20px;
+  height: 20px;
+}
+
+.music-captiontxt {
+  text-decoration: none;
+  color: #fff;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  display: block; /* <-- faz o link ocupar 100% da largura */
+  text-align: center; /* <-- centraliza o texto dentro do bloco */
+}
+
+.reload-btn{
+  display: flex;
+  border: none;
+  background-color: transparent;
+  transition: background-color 0.3s;
+  margin-right: 12px;
+}
+
+.reload-btn img{
+  width: 26px;
+  height: 26px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.reload-btn:active {
+  animation: spin 0.5s ease;
 }

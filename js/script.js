@@ -1,3 +1,47 @@
+window.addEventListener("DOMContentLoaded", () => {
+  fetch('musicas.json')
+    .then(res => res.json())
+    .then(musicas => {
+      const sorteada = musicas[Math.floor(Math.random() * musicas.length)];
+
+      document.querySelector(".music-title").textContent = sorteada.titulo;
+      document.querySelector(".music-artist").textContent = sorteada.artista;
+      document.querySelector(".music-cover").src = sorteada.capa;
+      document.getElementById("player").src = sorteada.arquivo;
+    })
+    .catch(err => console.error("Erro ao carregar músicas:", err));
+});
+
+const reloadBtn = document.querySelector('.reload-btn');
+const reloadIcon = document.getElementById('relod-icon');
+
+reloadBtn.addEventListener('click', () => {
+  reloadIcon.style.animation = 'none';
+  reloadIcon.offsetHeight; // força o repaint
+  reloadIcon.style.animation = 'spin 0.5s ease';
+  
+  const player = document.getElementById("player");
+  player.currentTime = 0;
+  player.play();
+});
+
+
+
+const player = document.getElementById("player");
+const btnPlayPause = document.getElementById("btnPlayPause");
+const playPauseIcon = document.getElementById("playPauseIcon");
+
+btnPlayPause.addEventListener("click", () => {
+  if (player.paused) {
+    player.play();
+    playPauseIcon.src = "img/icones/pause-svgrepo-com.svg";
+  } else {
+    player.pause();
+    playPauseIcon.src = "img/icones/play-svgrepo-com.svg";
+  }
+});
+
+
 const inicio = new Date("2020-10-12T17:34:00");
 
 function atualizarTempo() {
@@ -121,3 +165,6 @@ const livroDeAventuras = `
   </a>
 `;
 document.getElementById("meuTituloContainer").innerHTML = livroDeAventuras;
+
+
+

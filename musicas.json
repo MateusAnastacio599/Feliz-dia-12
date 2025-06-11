@@ -1,0 +1,26 @@
+[
+  {
+    "titulo": "Ponta Solta",
+    "artista": "ANAVITÓRIA",
+    "capa": "https://cdn-images.dzcdn.net/images/cover/0b7398894cd36e04b4d5ccf7b092acd5/1900x1900-000000-80-0-0.jpg",
+    "arquivo": "audio/Ponta solta.mp3"
+  },
+  {
+    "titulo": "BIRDS OF A FEATHER",
+    "artista": "Billie Eilish",
+    "capa": "https://i.scdn.co/image/ab67616d0000b27371d62ea7ea8a5be92d3c1f62",
+    "arquivo": "audio/BIRDS OF A FEATHER.mp3"
+  },
+  {
+    "titulo": "Te Espero Aqui",
+    "artista": "LVCAS",
+    "capa": "https://i.scdn.co/image/ab67616d0000b27379f5ddb4fa5e66daee7f573d",
+    "arquivo": "audio/Te Espero Aqui.mp3"
+  },
+  {
+    "titulo": "Calendário",
+    "artista": "ANAVITÓRIA",
+    "capa": "https://upload.wikimedia.org/wikipedia/pt/3/32/Capa_de_O_Tempo_%C3%89_Agora.jpg",
+    "arquivo": "audio/Pra Você Dar o Nome (Ao Vivo).mp3"
+  }
+]
