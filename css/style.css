@@ -132,6 +132,34 @@ body {
   margin-bottom: 20px;
 }
 
+.textinho{
+  padding-top: 40px;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-bottom: 40px;
+}
+
+.voltar-texto{
+  text-decoration: none;
+  color: #fff;
+  align-items: center;
+  display: flex;
+  align-content: center;
+  padding: 20px 10px 30px 10px;
+}
+
+.titulo a{
+  text-decoration: none;
+  color: #fff;
+}
+
+
+.voltar-texto img{
+  width: 28px;
+  height: 28px;
+  justify-items: baseline;
+}
+
 .music-player {
   bottom: 30px;
   background: #fff;
